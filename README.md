@@ -8,5 +8,14 @@
    3. File > Settings... > Language & Frameworks > Django
    
         [v] Enable Django Support
-   5. Run > Edit Configurations... > + > Django Server > Name: runserver
-   6. VCS > Enable Version Control Intergration... > git > ok
+   4. Run > Edit Configurations... > + > Django Server > Name: runserver
+   5. VCS > Enable Version Control Intergration... > git > ok
+2. startapp 여자친구
+   1. python manage.py startapp 여자친구
+   2. '여자친구', in INSTALLED_APPS in settings.py
+3. 여자친구/
+   1. models
+      1. Character
+         1. name, feature, created_dt, updated_dat
+      2. python manage.py makemigrations 여자친구
+      3. python manage.py migrate 여자친구
