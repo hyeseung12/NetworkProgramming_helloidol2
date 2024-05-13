@@ -25,3 +25,5 @@
       2. python manage.py createsuperuser
    3. views
       1. R: CharacterListView
+   4. templates/여자친구/
+      1. character_list.html
