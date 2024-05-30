@@ -7,7 +7,8 @@
         <th>#</th>
         <th>name</th>
         <th>one liner</th>
-        <th>수정</th>
+        <th>edit</th>
+        <th>remove</th>
     <thead/>
     {% for character in character_list %}
     <tr>
@@ -15,10 +16,11 @@
         <td><a href="{% url '여자친구:character_detail' pk=character.id %}">{{ character.name }}</a></td>
         <td>{{ character.description }}</td>
         <td><a href="{% url '여자친구:character_update' pk=character.id %}" class="btn btn-warning">🛠</a></td>
+        <td><a href="{% url '여자친구:character_delete' pk=character.id %}" class="btn btn-danger">💀</a></td>
     </tr>
     {% endfor %}
     <tr>
-        <td colspan="4"><a href="{% url '여자친구:character_create' %}" class="btn btn-success">+ Character</a></td>
+        <td colspan="5"><a href="{% url '여자친구:character_create' %}" class="btn btn-success">+ Character</a></td>
     </tr>
 </table>
 {% endblock %}
