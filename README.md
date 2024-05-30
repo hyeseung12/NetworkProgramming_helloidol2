@@ -29,3 +29,7 @@
       1. character_list.html
    5. urls
       1. 여자친구:character_list
+   6. templates
+      1. hase.html
+         1. settings.py > TEMPLATES
+            1. ['BASE_DIR' / 'templates']
