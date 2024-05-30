@@ -27,7 +27,7 @@
    3. views
       1. R: CharacterListView
       2. R: CharacterDetailView
-      3. R: CharacterCreateView
+      3. C: CharacterCreateView
    4. templates/여자친구/
       1. character_list.html
       2. character_detail.html
