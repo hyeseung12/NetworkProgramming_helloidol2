@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Character detail{% endblock %}
+
+{% block content %}
+    <h1>{{ character.name }}</h1>
+    <img src="{{ character.photo.url }}" alt="사진 없음">
+    {% if character.photo == None %}
+        {% load static %}
+        <img src="{% static '여자친구/photo/no_photo.png' %}" alt="업로드한 사진" style="width: 100px; height: 100px; object-fit: contain;">
+    {% else %}
+    {% endif %}
+    <ul>
+        <li>{{ character.feature }}</li>
+        <li>{{ character.created_at }}</li>
+        <li>{{ character.updated_at }}</li>
+    </ul>
+    <a href="{% url '여자친구:character_list' %}">Character List shortcut</a>
+{% endblock %}

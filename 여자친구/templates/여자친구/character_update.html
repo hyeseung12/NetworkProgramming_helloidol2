@@ -3,9 +3,11 @@
 {% block title %}Update Character{% endblock %}
 
 {% block content %}
-    <form method="post"> {# action에 값을 넣으면 action의 url이 먼저이므로 views에서 설정한 완료 후 이동되는 url이 말짱도루묵이 된다. #}
+    <form method="post" action="" enctype="multipart/form-data"> {# action에 값을 넣으면 action의 url이 먼저이므로 views에서 설정한 완료 후 이동되는 url이 말짱도루묵이 된다. #}
         {% csrf_token %} {# 값이 안 보이게 받음 #}
-        {{ form.as_ul }}
+        <ul>
+            {{ form.as_ul }}    <!-- <li>...</li>-->
+        </ul>
         <input type="submit" value="🛠 Character" class="btn btn-warning">
     </form>
 {% endblock %}
