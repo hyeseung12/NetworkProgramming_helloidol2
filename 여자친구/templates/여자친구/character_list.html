@@ -15,5 +15,8 @@
         <td>{{ character.description }}</td>
     </tr>
     {% endfor %}
+    <tr>
+        <td colspan="3"><a href="{% url 'DontStarve:character_create' %}" class="btn btn-success">+ Character</a></td>
+    </tr>
 </table>
 {% endblock %}
